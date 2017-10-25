@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">FastCheck</string>
+    <string name="txt_lanches">Lanches</string>
+    <string name="txt_bebidas">Bebidas</string>
+    <string name="txt_titulo">Magico</string>
+    <string name="lbl_retorno_observacao">Observação</string>
+    <string name="lbl_retorno_mesa">Mesa</string>
+    <string name="act_login_text_et_login">Usuário</string>
+    <string name="act_login_text_et_senha">Senha</string>
+    <string name="act_login_text_btn_login">Login</string>
+    <string name="act_login_msg_aut_us">Autenticando usuário...</string>
+    <string name="act_login_msg_erro_log">Erro ao realizar login</string>
+    <string name="act_login_msg_erro_serv">Não foi possível conectar ao servidor</string>
+    <string name="acv_login_text_btn_con">Conexão</string>
+    <string name="drawer_item_inicio">Início</string>
+    <string name="drawer_item_usuario">Usuários</string>
+    <string name="drawer_item_item">Itens</string>
+    <string name="drawer_item_logout">Logout</string>
+    <string name="drawer_item_logout2">Logout</string>
+    <string name="drawer_item_logout3">Logout</string>
+    <string name="fragment_bebida">Bebidas</string>
+    <string name="fragment_lanches">Lanches</string>
+    <string name="activity_user_nome">Nome</string>
+    <string name="activity_user_ok">Ok</string>
+    <item name="item_click_support" type="id" />
+
+</resources>
