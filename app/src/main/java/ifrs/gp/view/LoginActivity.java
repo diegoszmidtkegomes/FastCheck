@@ -99,7 +99,7 @@ public class LoginActivity extends AppCompatActivity implements iAsyncResponse, 
                     new Runnable() {
                         public void run() {
                             onLoginSuccess();
-                            new LoginController().login(LoginActivity.this, LoginActivity.this, usuario, MD5.convertToMD5(senha));
+                            new LoginController().login(LoginActivity.this, LoginActivity.this, usuario, senha);
                             /*new ValidaLoginWS().realizarConexao(getApplicationContext(),
                                     new ValidaLoginRequest(usuario, senha), LoginActivity.this);*/
                         }

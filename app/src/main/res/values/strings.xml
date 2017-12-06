@@ -22,6 +22,9 @@
     <string name="fragment_lanches">Lanches</string>
     <string name="activity_user_nome">Nome</string>
     <string name="activity_user_ok">Ok</string>
+    <string name="activity_user_preco">Preço</string>
+    <string name="activity_user_email">Email</string>
+    <string name="activity_user_senha">Senha</string>
     <item name="item_click_support" type="id" />
 
 </resources>

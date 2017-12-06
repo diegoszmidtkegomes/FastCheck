@@ -14,32 +14,32 @@ import org.ksoap2.transport.HttpTransportSE;
 import java.util.ArrayList;
 
 import ifrs.gp.model.SincronizaResposta;
-import ifrs.gp.model.request.CadastroUsuario;
+import ifrs.gp.model.request.CadastrarItemRequest;
 import ifrs.gp.model.request.LoginRequest;
 
 /**
  * Created by diego on 27/09/2017.
  */
 
-public class DaoUsuario {
+public class DaoItem {
 
-    public void executa(Context contexto, SincronizaResposta _delegate, CadastroUsuario req) {
-        new DaoUsuario.Ws(contexto, _delegate, req).execute();
+    public void executa(Context contexto, SincronizaResposta _delegate, CadastrarItemRequest req) {
+        new DaoItem.Ws(contexto, _delegate, req).execute();
     }
 
     public class Ws extends AsyncTask<Object, Object, String> {
         private final String URL = "https://restaurant-integration-dev-cloned-gabdevilshunter.c9users.io/index.php/Webservice";
         private final String NAMESPACE = "urn:server";
-        private final String METHOD = "cadastrar";
-        private final String SOAP_ACTION_PREFIX = "urn:server#cadastrar";
+        private final String METHOD = "salvar_item";
+        private final String SOAP_ACTION_PREFIX = "urn:server#salvar_item";
 
         private Object resposta;
         private SincronizaResposta _delegate = null;
         private Context contexto;
         private String pedido;
-        private CadastroUsuario req;
+        private CadastrarItemRequest req;
 
-        public Ws(Context contexto, SincronizaResposta _delegate, CadastroUsuario req) {
+        public Ws(Context contexto, SincronizaResposta _delegate, CadastrarItemRequest req) {
             this.contexto = contexto;
             this._delegate = _delegate;
             this.req = req;
@@ -53,18 +53,18 @@ public class DaoUsuario {
             param1.setType(String.class);
 
             PropertyInfo param2 = new PropertyInfo();
-            param2.setName("email");
-            param2.setValue(req.getEmail());
-            param2.setType(String.class);
+            param2.setName("preco");
+            param2.setValue(req.getPreco());
+            param2.setType(Double.class);
 
             PropertyInfo param3 = new PropertyInfo();
-            param3.setName("senha");
-            param3.setValue(req.getSenha());
-            param3.setType(String.class);
+            param3.setName("tipo");
+            param3.setValue(req.getTipo());
+            param3.setType(Integer.class);
 
             PropertyInfo param4 = new PropertyInfo();
-            param4.setName("tipoUsuario");
-            param4.setValue(req.getTipo());
+            param4.setName("disponibilidade");
+            param4.setValue(req.getDisponibilidade());
             param4.setType(Integer.class);
 
             SoapObject request = new SoapObject(NAMESPACE, METHOD);
@@ -97,7 +97,6 @@ public class DaoUsuario {
             String confirma = null;
             if (resposta != null)
                 confirma = resposta.toString();
-
             return confirma;
         }
 

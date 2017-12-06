@@ -39,7 +39,7 @@
             android:layout_marginTop="8dp">
 
             <EditText
-                android:id="@+id/activity_config_host"
+                android:id="@+id/activity_item_nome"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
@@ -48,10 +48,73 @@
                 android:inputType="text" />
         </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/activity_item_preco"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="8dip"
+                android:hint="@string/activity_user_preco"
+                android:inputType="numberDecimal" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="15dip"
+            android:id="@+id/linear_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="Tipo:"
+                android:layout_marginBottom="5dp"/>
+
+            <Spinner
+                android:id="@+id/activity_item_tipo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="15dip"
+            android:id="@+id/linear_layout2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="Disponibilidade:"
+                android:layout_marginBottom="5dp"
+                />
+            <Spinner
+                android:id="@+id/activity_item_disp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+
 
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/activity_config_btnok"
+            android:id="@+id/activity_item_ok"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"

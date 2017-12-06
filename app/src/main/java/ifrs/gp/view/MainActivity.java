@@ -43,6 +43,8 @@ public class MainActivity extends BaseActivity {
         //new PedidoController(this).testeLogin();
         _tabLayout = (TabLayout) findViewById(R.id.tabs);
 
+
+
         setToolbar("Fastcheck");
         criaMenu(this);
         pedidoCont = new PedidoController(this);
